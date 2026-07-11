@@ -823,10 +823,9 @@ function handleKey(e){
   if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){ e.preventDefault(); goTo(current+1); }
   if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); goTo(current-1); }
 }
-// listen on both document and window, and grab focus onto the page
-// so arrow keys work even if the browser initially focused the address bar
+// single listener on document only — window+document both would double-fire
+// every keypress since the event bubbles from document up to window
 document.addEventListener('keydown', handleKey);
-window.addEventListener('keydown', handleKey);
 document.body.setAttribute('tabindex','-1');
 window.addEventListener('load', ()=> document.body.focus());
 document.body.addEventListener('click', ()=> document.body.focus());
