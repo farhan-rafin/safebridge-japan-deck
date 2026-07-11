@@ -133,7 +133,8 @@ ul.blist .txt span{font-size:14px; color:var(--mist); line-height:1.5;}
 .team-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; max-width:1100px;}
 .team-card{background:rgba(247,245,240,0.04); border:1px solid var(--line); border-radius:14px; padding:18px; transition:border-color .2s, transform .2s;}
 .team-card:hover{border-color:var(--green); transform:translateY(-3px);}
-.team-avatar{width:42px;height:42px;border-radius:50%; background:var(--green); display:flex;align-items:center;justify-content:center; font-family:var(--font-display); font-weight:700; color:var(--navy); font-size:16px; margin-bottom:12px;}
+.team-avatar{width:42px;height:42px;border-radius:50%; background:var(--green); display:flex;align-items:center;justify-content:center; font-family:var(--font-display); font-weight:700; color:var(--navy); font-size:16px; margin-bottom:12px; overflow:hidden;}
+.team-avatar img{width:100%;height:100%;object-fit:cover; display:block;}
 .team-name{font-weight:600; font-size:14.5px; margin-bottom:3px;}
 .team-role{font-size:11.5px; color:var(--amber); font-family:var(--font-mono); letter-spacing:0.04em; margin-bottom:8px; text-transform:uppercase;}
 .team-desc{font-size:12.5px; color:var(--mist); line-height:1.5;}
@@ -331,14 +332,14 @@ const SLIDES = [
   eyebrow:'The people behind it', title:'Team & role allocation',
   lead:'Eight of us, eight jobs. Everyone owns one piece end to end — nobody is just "helping out."',
   members:[
-    {n:'ZT', name:'Zarin Tasnim', role:'Project Manager', desc:'Opens the pitch, runs execution planning, closes on the PM-vs-project distinction.'},
-    {n:'FA', name:'Farhan Ahmed', role:'User & Problem Analyst', desc:'Owns the problem framing, user needs, and the persona journey.'},
-    {n:'NH', name:'Nahid Hasan', role:'Accessibility Lead', desc:'Mission, vision, and what "accessible" actually has to mean here.'},
-    {n:'MT', name:'Mayesha Tabassum', role:'Stakeholder Lead', desc:'Solution overview and the full stakeholder map.'},
-    {n:'SR', name:'Shreyas Reddy', role:'Digital Platform Lead', desc:'App, GPS routing, and everything that lives on a phone.'},
-    {n:'EC', name:'Eunjeong Choi', role:'Physical Materials Lead', desc:'Printed maps, pamphlets, and where they actually get handed out.'},
-    {n:'JF', name:'Jannat Fardous', role:'Finance Lead', desc:'Budget, resourcing, where the money goes.'},
-    {n:'AM', name:'Alvi Masrur', role:'Risk & Methodology Lead', desc:'Why Hybrid Agile, what could go wrong, and the closing word.'},
+    {n:'ZT', photo:'', name:'Zarin Tasnim', role:'Project Manager', desc:'Opens the pitch, runs execution planning, closes on the PM-vs-project distinction.'},
+    {n:'FA', photo:'', name:'Farhan Ahmed', role:'User & Problem Analyst', desc:'Owns the problem framing, user needs, and the persona journey.'},
+    {n:'NH', photo:'', name:'Nahid Hasan', role:'Accessibility Lead', desc:'Mission, vision, and what "accessible" actually has to mean here.'},
+    {n:'MT', photo:'', name:'Mayesha Tabassum', role:'Stakeholder Lead', desc:'Solution overview and the full stakeholder map.'},
+    {n:'SR', photo:'', name:'Shreyas Reddy', role:'Digital Platform Lead', desc:'App, GPS routing, and everything that lives on a phone.'},
+    {n:'EC', photo:'', name:'Eunjeong Choi', role:'Physical Materials Lead', desc:'Printed maps, pamphlets, and where they actually get handed out.'},
+    {n:'JF', photo:'', name:'Jannat Fardous', role:'Finance Lead', desc:'Budget, resourcing, where the money goes.'},
+    {n:'AM', photo:'', name:'Alvi Masrur', role:'Risk & Methodology Lead', desc:'Why Hybrid Agile, what could go wrong, and the closing word.'},
   ]
 }},
 // 3 ----------------------------------------------------------------
@@ -660,7 +661,7 @@ function renderTeam(d){
   <h1 class="title reveal">${d.title}</h1>
   <p class="lead reveal">${d.lead}</p>
   <div class="team-grid reveal">
-    ${d.members.map(m=>`<div class="team-card"><div class="team-avatar">${m.n}</div><div class="team-name">${m.name}</div><div class="team-role">${m.role}</div><div class="team-desc">${m.desc}</div></div>`).join('')}
+    ${d.members.map(m=>`<div class="team-card"><div class="team-avatar">${m.photo?`<img src="${m.photo}" alt="${m.name}">`:m.n}</div><div class="team-name">${m.name}</div><div class="team-role">${m.role}</div><div class="team-desc">${m.desc}</div></div>`).join('')}
   </div>`;
 }
 function renderTwocol(d){
