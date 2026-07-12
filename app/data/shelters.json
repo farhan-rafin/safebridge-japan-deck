@@ -1,0 +1,35 @@
+{
+  "note": "Sample/illustrative shelter data for prototype demo purposes — coordinates approximate, near APU Beppu campus. A production build would pull this from municipal open data (Beppu City / JMA designated shelter registry).",
+  "shelters": [
+    {
+      "id": "sh1",
+      "name": "APU Millennium Hall",
+      "type": "Designated evacuation site",
+      "lat": 33.2799,
+      "lng": 131.5016,
+      "distanceKm": 0.1,
+      "capacity": "1,200",
+      "notes": "On-campus. Nearest option for APU students and dorm residents."
+    },
+    {
+      "id": "sh2",
+      "name": "Beppu Kamegawa Elementary School",
+      "type": "Designated evacuation site",
+      "lat": 33.2963,
+      "lng": 131.4989,
+      "distanceKm": 1.8,
+      "capacity": "600",
+      "notes": "Neighborhood shelter, tsunami-safe elevation."
+    },
+    {
+      "id": "sh3",
+      "name": "B-Con Plaza (Beppu International Convention Center)",
+      "type": "Designated evacuation site",
+      "lat": 33.2838,
+      "lng": 131.4841,
+      "distanceKm": 3.4,
+      "capacity": "2,000",
+      "notes": "Large citywide shelter, near Beppu Station."
+    }
+  ]
+}
