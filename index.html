@@ -128,6 +128,29 @@ ul.blist .txt span{font-size:14px; color:var(--mist); line-height:1.5;}
 
 /* cover */
 .cover-wrap{display:flex; flex-direction:column; align-items:flex-start; justify-content:center; height:100%; position:relative; perspective:1400px;}
+
+/* radar ground plane (decorative, behind cover content) */
+.c3d-ground{
+  position:absolute; left:-12%; bottom:0; width:124%; height:86%; z-index:-1;
+  transform-origin:50% 100%; transform:rotateX(57deg) translateZ(-50px);
+  pointer-events:none; overflow:hidden;
+  background-image:linear-gradient(rgba(15,29,58,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(15,29,58,0.055) 1px, transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 62% 80% at 54% 92%, #000 32%, transparent 76%);
+  mask-image:radial-gradient(ellipse 62% 80% at 54% 92%, #000 32%, transparent 76%);
+}
+.c3d-ground .ring{position:absolute; left:54%; top:66%; border-radius:50%; border:1.5px solid rgba(10,138,60,0.30); transform:translate(-50%,-50%);}
+.c3d-ground .ring.r1{width:230px; height:230px;}
+.c3d-ground .ring.r2{width:480px; height:480px; border-color:rgba(10,138,60,0.20);}
+.c3d-ground .ring.r3{width:760px; height:760px; border-color:rgba(10,138,60,0.12);}
+.c3d-ground .sweep{
+  position:absolute; left:54%; top:66%; width:760px; height:760px; border-radius:50%;
+  transform:translate(-50%,-50%) rotate(0deg);
+  background:conic-gradient(from 0deg, rgba(0,166,60,0.14), transparent 26%);
+  animation:c3dSweep 10s linear infinite;
+}
+@keyframes c3dSweep{to{transform:translate(-50%,-50%) rotate(360deg);}}
+@media (prefers-reduced-motion:reduce){ .c3d-ground .sweep{animation:none;} }
 .cover-badge{font-family:var(--font-mono); font-size:12px; letter-spacing:0.2em; color:var(--amber); border:1px solid rgba(255,184,28,0.4); padding:6px 14px; border-radius:20px; margin-bottom:26px; transition:transform .12s ease-out; will-change:transform;}
 .cover-title{font-family:var(--font-display); font-weight:800; font-size:clamp(44px,7.5vw,88px); line-height:0.95; letter-spacing:-0.02em; margin-bottom:18px; transition:transform .12s ease-out; transform-style:preserve-3d; will-change:transform;}
 .cover-title span{color:var(--green);}
@@ -718,6 +741,10 @@ function renderBasic(d){
 }
 function renderCover(d){
   return `<div class="cover-wrap">
+    <div class="c3d-ground" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="sweep"></div>
+    </div>
     <div class="cover-badge reveal">${d.badge}</div>
     <div class="cover-title reveal">${d.title1} <span>${d.title2}</span></div>
     <div class="cover-tag reveal">${d.tag}</div>
