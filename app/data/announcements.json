@@ -8,15 +8,12 @@
       "source": "Beppu City / JMA",
       "text": {
         "en": { "title": "Tsunami Advisory — Evacuate Now", "body": "A tsunami advisory has been issued for Beppu Bay. Move to high ground or the nearest designated shelter immediately. Do not return to coastal areas until the advisory is lifted." },
-        "ja": { "title": "津波注意報 — 直ちに避難してください", "body": "別府湾に津波注意報が発表されました。直ちに高台または最寄りの指定避難所へ移動してください。解除されるまで沿岸部に戻らないでください。" },
+        "zh-cn": { "title": "海啸警报 — 请立即撤离", "body": "别府湾已发布海啸警报。请立即前往高地或最近的指定避难所。在警报解除前请勿返回沿海地区。" },
+        "zh-tw": { "title": "海嘯警報 — 請立即撤離", "body": "別府灣已發布海嘯警報。請立即前往高地或最近的指定避難所。在警報解除前請勿返回沿海地區。" },
         "ko": { "title": "쓰나미 주의보 — 즉시 대피하세요", "body": "벳푸만에 쓰나미 주의보가 발령되었습니다. 즉시 고지대나 가까운 지정 대피소로 이동하세요. 해제될 때까지 해안 지역으로 돌아가지 마세요." },
-        "zh": { "title": "海啸警报 — 请立即撤离", "body": "别府湾已发布海啸警报。请立即前往高地或最近的指定避难所。在警报解除前请勿返回沿海地区。" },
-        "bn": { "title": "সুনামি সতর্কতা — এখনই সরে যান", "body": "বেপ্পু উপসাগরে সুনামি সতর্কতা জারি করা হয়েছে। অবিলম্বে উঁচু স্থানে বা নিকটতম নির্ধারিত আশ্রয়কেন্দ্রে যান। সতর্কতা প্রত্যাহার না হওয়া পর্যন্ত উপকূলীয় এলাকায় ফিরবেন না।" },
-        "my": { "title": "ဆူနာမီသတိပေးချက် — ချက်ချင်းရွှေ့ပါ", "body": "Beppu ပင်လယ်အော်တွင် ဆူနာမီသတိပေးချက်ကို ထုတ်ပြန်ထားသည်။ မြင့်သောနေရာ သို့မဟုတ် အနီးဆုံးသတ်မှတ်ထားသော ခိုလှုံရာသို့ ချက်ချင်းရွှေ့ပါ။ သတိပေးချက်ရုပ်သိမ်းသည်အထိ ကမ်းရိုးတန်းသို့ မပြန်ပါနှင့်။" },
         "vi": { "title": "Cảnh báo sóng thần — Sơ tán ngay", "body": "Cảnh báo sóng thần đã được ban hành cho vịnh Beppu. Hãy di chuyển đến nơi cao hoặc nơi trú ẩn được chỉ định gần nhất ngay lập tức. Không quay lại khu vực ven biển cho đến khi cảnh báo được gỡ bỏ." },
-        "ne": { "title": "सुनामी सूचना — अहिल्यै सुरक्षित स्थानमा जानुहोस्", "body": "बेप्पु खाडीमा सुनामी सूचना जारी गरिएको छ। तुरुन्तै अग्लो ठाउँ वा नजिकैको तोकिएको आश्रयस्थलमा सर्नुहोस्। सूचना नहटाएसम्म तटीय क्षेत्रमा नफर्किनुहोस्।" },
-        "fr": { "title": "Alerte tsunami — Évacuez maintenant", "body": "Une alerte au tsunami a été émise pour la baie de Beppu. Rendez-vous immédiatement en hauteur ou à l'abri désigné le plus proche. Ne retournez pas sur le littoral avant la levée de l'alerte." },
-        "es": { "title": "Aviso de tsunami — Evacúe ahora", "body": "Se ha emitido un aviso de tsunami para la bahía de Beppu. Diríjase de inmediato a un terreno elevado o al refugio designado más cercano. No regrese a las zonas costeras hasta que se levante el aviso." }
+        "fil": { "title": "Tsunami Advisory — Lumikas Na Ngayon", "body": "May tsunami advisory na inilabas para sa Beppu Bay. Pumunta agad sa mataas na lugar o sa pinakamalapit na itinalagang silungan. Huwag bumalik sa mga baybaying lugar hanggang maalis ang advisory." },
+        "ne": { "title": "सुनामी सूचना — अहिल्यै सुरक्षित स्थानमा जानुहोस्", "body": "बेप्पु खाडीमा सुनामी सूचना जारी गरिएको छ। तुरुन्तै अग्लो ठाउँ वा नजिकैको तोकिएको आश्रयस्थलमा सर्नुहोस्। सूचना नहटाएसम्म तटीय क्षेत्रमा नफर्किनुहोस्।" }
       }
     },
     {
@@ -26,15 +23,12 @@
       "source": "Japan Meteorological Agency",
       "text": {
         "en": { "title": "Typhoon Warning — Heavy Rain Expected", "body": "Typhoon No. 8 is approaching Kyushu. Heavy rain and strong wind expected from tonight through tomorrow morning. Avoid rivers, coastal roads, and steep slopes." },
-        "ja": { "title": "台風警報 — 大雨のおそれ", "body": "台風8号が九州に接近中です。今夜から明日朝にかけて大雨・強風が予想されます。河川、海沿いの道路、急傾斜地には近づかないでください。" },
+        "zh-cn": { "title": "台风警报 — 预计有强降雨", "body": "8号台风正逼近九州。今晚至明晨预计有强降雨和大风。请远离河流、沿海道路和陡坡地区。" },
+        "zh-tw": { "title": "颱風警報 — 預計有強降雨", "body": "8號颱風正逼近九州。今晚至明晨預計有強降雨和強風。請遠離河流、沿海道路和陡坡地區。" },
         "ko": { "title": "태풍 경보 — 폭우 예상", "body": "제8호 태풍이 규슈에 접근하고 있습니다. 오늘 밤부터 내일 아침까지 폭우와 강풍이 예상됩니다. 하천, 해안 도로, 급경사지에 접근하지 마세요." },
-        "zh": { "title": "台风警报 — 预计有强降雨", "body": "8号台风正逼近九州。今晚至明晨预计有强降雨和大风。请远离河流、沿海道路和陡坡地区。" },
-        "bn": { "title": "টাইফুন সতর্কতা — ভারী বৃষ্টির আশঙ্কা", "body": "টাইফুন নং ৮ কিউশুর দিকে এগিয়ে আসছে। আজ রাত থেকে আগামীকাল সকাল পর্যন্ত ভারী বৃষ্টি ও প্রবল বাতাসের আশঙ্কা। নদী, উপকূলীয় সড়ক ও খাড়া ঢাল এড়িয়ে চলুন।" },
-        "my": { "title": "တိုင်ဖွန်းသတိပေးချက် — မိုးသည်းထန်နိုင်", "body": "တိုင်ဖွန်းအမှတ် ၈ သည် Kyushu သို့ ချဉ်းကပ်နေသည်။ ယနေ့ညမှ မနက်ဖြန်နံနက်အထိ မိုးသည်းထန်ပြီး လေပြင်းတိုက်နိုင်သည်။ မြစ်များ၊ ကမ်းရိုးတန်းလမ်းများနှင့် ချောက်ကမ်းပါးများကို ရှောင်ပါ။" },
         "vi": { "title": "Cảnh báo bão — Dự báo mưa lớn", "body": "Bão số 8 đang tiến gần Kyushu. Dự báo mưa lớn và gió mạnh từ tối nay đến sáng mai. Tránh xa sông suối, đường ven biển và dốc núi." },
-        "ne": { "title": "आँधी चेतावनी — भारी वर्षाको सम्भावना", "body": "आँधी नं. ८ क्युशुतिर बढ्दै छ। आजराति देखि भोलि बिहानसम्म भारी वर्षा र तेज हावा हुने अनुमान छ। नदी, समुद्र किनारका सडक र होचो भिरालो ठाउँबाट टाढा रहनुहोस्।" },
-        "fr": { "title": "Alerte typhon — Fortes pluies attendues", "body": "Le typhon n° 8 approche de Kyushu. De fortes pluies et des vents violents sont attendus de ce soir à demain matin. Évitez les rivières, les routes côtières et les pentes raides." },
-        "es": { "title": "Alerta de tifón — Se esperan lluvias intensas", "body": "El tifón n.º 8 se acerca a Kyushu. Se esperan lluvias intensas y vientos fuertes desde esta noche hasta mañana por la mañana. Evite ríos, carreteras costeras y pendientes pronunciadas." }
+        "fil": { "title": "Babala sa Bagyo — Inaasahan ang Malakas na Ulan", "body": "Papalapit ang Bagyong Bilang 8 sa Kyushu. Inaasahan ang malakas na ulan at hangin mula ngayong gabi hanggang bukas ng umaga. Iwasan ang mga ilog, kalsadang baybayin, at matarik na dalisdis." },
+        "ne": { "title": "आँधी चेतावनी — भारी वर्षाको सम्भावना", "body": "आँधी नं. ८ क्युशुतिर बढ्दै छ। आजराति देखि भोलि बिहानसम्म भारी वर्षा र तेज हावा हुने अनुमान छ। नदी, समुद्र किनारका सडक र होचो भिरालो ठाउँबाट टाढा रहनुहोस्।" }
       }
     },
     {
@@ -43,16 +37,13 @@
       "time": "2026-07-11T18:00:00+09:00",
       "source": "Beppu City Office",
       "text": {
-        "en": { "title": "Evacuation Drill — This Saturday", "body": "A joint city-university evacuation drill will be held this Saturday at 10:00. Foreign residents are encouraged to join and try the SafeBridge app's offline map mode." },
-        "ja": { "title": "避難訓練のお知らせ — 今週土曜日", "body": "今週土曜日10時に市と大学合同の避難訓練を行います。外国人住民の方もぜひご参加ください。SafeBridgeアプリのオフライン地図もお試しください。" },
-        "ko": { "title": "대피 훈련 안내 — 이번 주 토요일", "body": "이번 주 토요일 오전 10시에 시-대학 합동 대피 훈련이 실시됩니다. 외국인 주민들도 참여하여 SafeBridge 앱의 오프라인 지도 기능을 체험해 보세요." },
-        "zh": { "title": "避难演习通知 — 本周六举行", "body": "本周六上午10点将举行市与大学联合避难演习。欢迎外国居民参加，并体验SafeBridge应用的离线地图功能。" },
-        "bn": { "title": "উদ্ধার মহড়া — এই শনিবার", "body": "এই শনিবার সকাল ১০টায় শহর ও বিশ্ববিদ্যালয়ের যৌথ উদ্ধার মহড়া অনুষ্ঠিত হবে। বিদেশি বাসিন্দাদের অংশ নিতে এবং SafeBridge অ্যাপের অফলাইন মানচিত্র ব্যবহার করে দেখতে উৎসাহিত করা হচ্ছে।" },
-        "my": { "title": "ရွှေ့ပြောင်းလေ့ကျင့်ခန်း — ဒီစနေနေ့", "body": "ဒီစနေနေ့ မနက် ၁၀ နာရီတွင် မြို့နှင့် တက္ကသိုလ်ပူးတွဲ ရွှေ့ပြောင်းလေ့ကျင့်ခန်းကျင်းပမည်။ နိုင်ငံခြားသားနေထိုင်သူများ ပါဝင်ရန်နှင့် SafeBridge အက်ပ်၏ အော့ဖ်လိုင်းမြေပုံကို စမ်းသုံးရန် တိုက်တွန်းပါသည်။" },
-        "vi": { "title": "Diễn tập sơ tán — Thứ Bảy này", "body": "Buổi diễn tập sơ tán chung giữa thành phố và trường đại học sẽ diễn ra vào 10:00 thứ Bảy này. Khuyến khích cư dân nước ngoài tham gia và thử chế độ bản đồ ngoại tuyến của ứng dụng SafeBridge." },
-        "ne": { "title": "उद्धार अभ्यास — यो शनिबार", "body": "यो शनिबार बिहान १०:०० बजे शहर र विश्वविद्यालयको संयुक्त उद्धार अभ्यास हुनेछ। विदेशी बासिन्दाहरूलाई सहभागी हुन र SafeBridge एपको अफलाइन नक्सा प्रयोग गरी हेर्न प्रोत्साहित गरिन्छ।" },
-        "fr": { "title": "Exercice d'évacuation — Ce samedi", "body": "Un exercice d'évacuation conjoint ville-université aura lieu ce samedi à 10h00. Les résidents étrangers sont invités à participer et à essayer le mode carte hors ligne de l'application SafeBridge." },
-        "es": { "title": "Simulacro de evacuación — Este sábado", "body": "Este sábado a las 10:00 se realizará un simulacro de evacuación conjunto entre la ciudad y la universidad. Se anima a los residentes extranjeros a participar y probar el modo de mapa sin conexión de la app SafeBridge." }
+        "en": { "title": "Evacuation Drill — This Saturday", "body": "A joint city-university evacuation drill will be held this Saturday at 10:00. Foreign residents are encouraged to join and try alertlingo's offline map mode." },
+        "zh-cn": { "title": "避难演习通知 — 本周六举行", "body": "本周六上午10点将举行市与大学联合避难演习。欢迎外国居民参加，并体验alertlingo的离线地图功能。" },
+        "zh-tw": { "title": "避難演習通知 — 本週六舉行", "body": "本週六上午10點將舉行市與大學聯合避難演習。歡迎外國居民參加，並體驗alertlingo的離線地圖功能。" },
+        "ko": { "title": "대피 훈련 안내 — 이번 주 토요일", "body": "이번 주 토요일 오전 10시에 시-대학 합동 대피 훈련이 실시됩니다. 외국인 주민들도 참여하여 alertlingo의 오프라인 지도 기능을 체험해 보세요." },
+        "vi": { "title": "Diễn tập sơ tán — Thứ Bảy này", "body": "Buổi diễn tập sơ tán chung giữa thành phố và trường đại học sẽ diễn ra vào 10:00 thứ Bảy này. Khuyến khích cư dân nước ngoài tham gia và thử chế độ bản đồ ngoại tuyến của alertlingo." },
+        "fil": { "title": "Ehersisyo sa Paglikas — Sabado na Ito", "body": "Isang magkasanib na ehersisyo sa paglikas ng lungsod at unibersidad ang gaganapin sa Sabado na ito ika-10:00 ng umaga. Hinihikayat ang mga dayuhang residente na sumali at subukan ang offline na mode ng mapa ng alertlingo." },
+        "ne": { "title": "उद्धार अभ्यास — यो शनिबार", "body": "यो शनिबार बिहान १०:०० बजे शहर र विश्वविद्यालयको संयुक्त उद्धार अभ्यास हुनेछ। विदेशी बासिन्दाहरूलाई सहभागी हुन र alertlingo को अफलाइन नक्सा प्रयोग गरी हेर्न प्रोत्साहित गरिन्छ।" }
       }
     }
   ]

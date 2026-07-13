@@ -1,7 +1,7 @@
 :root{
   --navy:#0F1D3A; --navy-2:#152647;
-  --green:#0A8A3C; --green-bright:#00A63C; --green-dark:#00682B;
-  --amber:#B87400; --amber-bright:#FFB81C;
+  --green:#E8720C; --green-bright:#FF7A1A; --green-dark:#B85400;
+  --amber:#B98A00; --amber-bright:#FFC93C;
   --red:#C0392B; --red-bright:#E63946;
   --paper:#F7F5F0; --bg:#FDFCFA; --ink:#0F1D3A; --white:#FFFFFF;
   --mist:rgba(15,29,58,0.60); --line:rgba(15,29,58,0.12);

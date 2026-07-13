@@ -1,4 +1,4 @@
-const CACHE = 'safebridge-v1';
+const CACHE = 'alertlingo-v1';
 const ASSETS = [
   './',
   './index.html',
