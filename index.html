@@ -256,6 +256,8 @@ table.dtable{width:100%; max-width:1130px; border-collapse:collapse; font-size:1
 table.dtable th{font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.06em; font-size:10.5px; color:var(--orange-dark); text-align:left; padding:10px 14px; border-bottom:2px solid rgba(232,114,12,.4);}
 table.dtable td{padding:12px 14px; border-bottom:1px solid var(--line); color:var(--mist); vertical-align:top; line-height:1.45;}
 table.dtable tr td:first-child{color:var(--ink); font-weight:600;}
+table.dtable.compact th{padding:7px 12px;}
+table.dtable.compact td{padding:8px 12px; line-height:1.35;}
 .pill{display:inline-block; font-size:10.5px; font-family:var(--font-mono); padding:3px 9px; border-radius:10px; letter-spacing:.04em;}
 .pill.high{background:rgba(230,57,70,.18); color:#ff8a93; border:1px solid rgba(230,57,70,.4);}
 .pill.med{background:rgba(185,138,0,.18); color:var(--gold); border:1px solid rgba(185,138,0,.4);}
@@ -394,6 +396,48 @@ table.dtable tr td:first-child{color:var(--ink); font-weight:600;}
 .pie-row .pct{font-family:var(--font-mono); font-size:15px; font-weight:700; width:44px; text-align:right;}
 .pie-row .desc{font-size:11.5px; color:var(--mist); display:block; font-weight:400;}
 
+/* ===== problem stats (slide 3) ===== */
+.stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.stat-cell .ico-box{width:22px;height:22px;border-radius:7px;background:rgba(232,114,12,.14); border:1px solid rgba(232,114,12,.32); display:flex; align-items:center; justify-content:center; color:var(--orange-dark); margin-bottom:3px;}
+.stat-cell .ico-box .icn{width:13px;height:13px;}
+.stat-cell b{display:block; font-family:var(--font-display); font-size:17px; font-weight:800; line-height:1.1;}
+.stat-cell span{display:block; font-size:9.5px; font-weight:600; color:var(--ink); margin-top:2px; line-height:1.28;}
+.stat-cell em{display:block; font-style:normal; font-size:8.5px; color:var(--mist); margin-top:1px; line-height:1.3;}
+.foot-cite{font-size:9px; color:var(--mist); margin-top:6px; line-height:1.5; max-width:1140px;}
+
+/* ===== budget table + donut (slide 5) ===== */
+.budget-wrap{display:grid; grid-template-columns:1.45fr 1.2fr; gap:24px; align-items:start; max-width:1170px;}
+.budget-side{display:flex; flex-direction:column; gap:14px; align-items:center;}
+.pie-center{position:relative; width:335px; height:335px; margin:4px auto 0;}
+.pie-center .pie{position:absolute; inset:57px; width:221px; height:221px;}
+.pie-center .pie::after{inset:35px;}
+.pie-center .center-label{position:absolute; inset:92px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:4px;}
+.pie-center .center-label b{font-family:var(--font-display); font-size:18px; font-weight:800;}
+.pie-center .center-label span{font-size:9.5px; color:var(--mist); text-transform:uppercase; letter-spacing:.05em; max-width:125px; line-height:1.3;}
+.pie-center .pie-leaders{position:absolute; inset:0; width:335px; height:335px; pointer-events:none; overflow:visible;}
+
+/* ===== how it works (slide 6) ===== */
+.hiw-wrap{display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;}
+.phone-mini{width:150px; height:284px; overflow:hidden; flex-shrink:0;}
+.phone-mini .phone-scale{transform:scale(0.65); transform-origin:top left; width:230px;}
+.phone .optgrid{display:grid; grid-template-columns:1fr 1fr; gap:7px;}
+.phone .optcell{border:1px solid var(--line); border-radius:10px; padding:8px 6px; font-size:9.5px; color:var(--mist); display:flex; flex-direction:column; align-items:center; gap:4px; text-align:center;}
+.phone .optcell svg{width:14px;height:14px;}
+.phone .langrow{margin-top:auto; display:flex; align-items:center; justify-content:space-between; padding:8px 4px 0; border-top:1px solid var(--line); font-size:9.5px; color:var(--mist);}
+.hiw-steps-row{display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+.hiw-steps-label{font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--orange-dark); display:flex; align-items:center; gap:6px; flex-shrink:0;}
+.hiw-step-h{display:flex; align-items:flex-start; gap:9px; flex:1; min-width:160px;}
+.hiw-step-h .n{width:23px;height:23px;border-radius:50%; background:var(--navy); color:#fff; font-family:var(--font-mono); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.hiw-step-h b{display:block; font-size:12.5px;}
+.hiw-step-h span{font-size:10.5px; color:var(--mist); line-height:1.35;}
+
+/* ===== phased pilot (slide 7) ===== */
+.pilot-wrap{display:grid; grid-template-columns:2.15fr 1fr; gap:22px; align-items:start; max-width:1140px;}
+.lang-list{display:flex; flex-direction:column; gap:7px;}
+.lang-row{display:flex; align-items:center; gap:10px; font-size:12.5px; font-weight:600; padding:5px 0; border-bottom:1px solid var(--line);}
+.lang-row:last-child{border-bottom:none;}
+.lang-row .flag{font-size:17px; line-height:1;}
+
 @media (max-width:900px){
   .slide{padding:90px 24px 70px;}
   .cover-title{font-size:44px;}
@@ -497,7 +541,7 @@ html.fine-pointer #cursorDot,html.fine-pointer #cursorRing{display:block;}
 </svg>
 <div id="routewrap"><div id="routefill"></div></div>
 <div id="topbar">
-  <div id="brandmark"><svg class="bmark icn" viewBox="0 0 24 24" style="color:#E63946"><use href="#i-alert"/></svg> alert<span class="lingo">lingo</span><span class="grp">— GROUP 25</span></div>
+  <div id="brandmark"><svg class="bmark icn" viewBox="0 0 24 24" style="color:#E63946"><use href="#i-alert"/></svg><span class="wordmark">alert<span class="lingo">lingo</span></span><span class="grp">— GROUP 25</span></div>
   <a id="appLinkPill" href="app/">TRY THE APP PROTOTYPE →</a>
   <div id="counter">01 / 28</div>
 </div>
@@ -556,14 +600,27 @@ const SLIDES = [
   ]
 }},
 // 3 — Problem Background ----------------------------------------------------------------
-{kind:'basic', speaker:'Farhan', time:'2 min', data:{
+{kind:'problemStats', speaker:'Farhan', time:'2 min', data:{
   eyebrow:'The problem', title:'When disaster hits, Japanese is the default language — and that leaves people out',
-  lead:'Japan gets earthquakes, typhoons, and tsunami warnings on a regular schedule. Every warning system built for it assumes the person receiving it reads Japanese.',
-  items:[
-    {icon:'alert', b:'Loudspeaker announcements', d:'Broadcast in Japanese only, often too fast or too distorted to follow even for intermediate learners.'},
-    {icon:'map', b:'Evacuation maps', d:'Shelter names and route labels are written in kanji, with no icon or English fallback in most neighborhoods.'},
-    {icon:'phone', b:'J-Alert smartphone warnings', d:'Push notifications assume Japanese literacy — the alert fires, but the instruction doesn\'t land.'},
-    {icon:'users', b:'Long-term residents included', d:'Even people who\'ve lived in Japan for years report lagging behind Japanese neighbors on real-time safety info.'},
+  lead:'Japan faces frequent earthquakes, typhoons, and tsunamis. Warning systems are built for speed — not for translation. For millions of foreign residents and tourists, critical information is often unreadable, unclear, or arrives too late to act.',
+  stats:[
+    {icon:'users', val:'3.77M+', label:'Foreign residents in Japan (2023)¹', sub:'Many struggle with Japanese emergency instructions.'},
+    {icon:'globe', val:'25.1M+', label:'International visitors in 2024²', sub:'Tourists may not understand alerts while in danger.'},
+    {icon:'warn', val:'2,000+', label:'Disaster events in Japan (2013–2023)³', sub:'Earthquakes, typhoons, and tsunamis — happening more often.'},
+    {icon:'chat', val:'67%', label:'Of foreign residents say language is a major barrier in emergencies⁴', sub:'Information is hard to find, hard to read, or hard to trust.'},
+  ],
+  consequences:[
+    {icon:'bell', h:'Japanese-only announcements', d:'Broadcasts, sirens, and signage are almost exclusively in Japanese.'},
+    {icon:'route', h:'Evacuation confusion', d:'People may not understand where to go, how to go, or what to do.'},
+    {icon:'phone', h:'J-Alert not user-friendly', d:'The official app is in Japanese and not designed for foreign language users.'},
+    {icon:'users', h:'Long-term exclusion', d:'Foreign residents and tourists are left behind in times when every second matters.'},
+  ],
+  why:'In a disaster, not understanding the warning can be life-threatening. AlertLingo exists to close this language gap and make safety information accessible to all — in the moment that matters most.',
+  footnotes:[
+    'Ministry of Justice, Japan. (2023). Population of foreign nationals in Japan.',
+    'Japan National Tourism Organization (JNTO). (2024). Visitor Arrivals to Japan.',
+    'Cabinet Office. (2024). White Paper on Disaster Management in Japan.',
+    'CLAIR. (2022). Survey on the daily life of foreign residents in Japan.',
   ]
 }},
 // 4 — User Needs & Pain Points ----------------------------------------------------------------
@@ -583,54 +640,77 @@ const SLIDES = [
     'Icons and color-coding that need no translation at all',
     'A real person nearby who can point them the right way',
   ]},
+  footer:{h:'In a disaster, clarity saves lives.', p:'People do not just need information — they need to understand it.', steps:['Understand','Act','Stay safe','Together']},
 }},
-// 5 — alertlingo overview + why these languages ----------------------------------------------------------------
-{kind:'overviewPillars', speaker:'Nahid', time:'2 min', data:{
-  eyebrow:'What we\'re building', title:'alertlingo',
-  lead:'alertlingo is a multilingual disaster-alert app that syncs with Japan\'s existing emergency-information systems and translates Japanese warnings. It complements Japan\'s existing emergency systems by adding accurate, context-aware translations that explain what happened, what to do, and where to go.',
-  stat:{h:'Why these languages?', p:'Japan recorded a historic 4.13 million foreign residents and 42.68 million international visitor arrivals in 2025. The five largest foreign resident communities are Chinese, Vietnamese, Korean, Filipino, and Nepalese, representing approximately 2.68 million people. alertlingo launches with English, Chinese (Simplified & Traditional), Korean, Vietnamese, Filipino, and Nepalese.'},
-  pillars:[
-    {icon:'chat', h:'Clear Communication', p:'Breaking language barriers to deliver life-saving information clearly.'},
-    {icon:'clock', h:'Real-Time Reliability', p:'Providing accurate, up-to-date alerts and instructions when every second matters.'},
-    {icon:'shield', h:'Empower Through Information', p:'Helping people make informed decisions and take action with confidence.'},
-    {icon:'target', h:'Simplicity with Purpose', p:'Easy to understand, easy to use — built for emergencies, designed for everyone.'},
-    {icon:'globe', h:'Global & Local Connection', p:'Bridging global visitors with local systems to build a safer community.'},
-    {icon:'users', h:'Inclusive for All', p:'Designed for everyone — residents and travelers, no matter the language.'},
+// 5 — Indicative Beppu Pilot Budget (MVP) ----------------------------------------------------------------
+{kind:'budgetTable', speaker:'Jannat', time:'1.5 min', data:{
+  eyebrow:'Project financial strategy', title:'Indicative Beppu pilot budget (MVP)',
+  lead:'This is an initial pilot budget for developing and testing the AlertLingo MVP in Beppu. The allocation is based on the project\'s work breakdown structure, expected resource needs, technical complexity, and risk exposure. Figures are indicative and subject to revision after supplier quotations and stakeholder consultation.',
+  rows:[
+    {cat:'Digital Development', desc:'Core of the project; highest technical and infrastructure cost. Includes prototype, maps integration, and offline features.', pct:40, amt:'400,000', color:'#8a6fe0'},
+    {cat:'Human Resources & Translation', desc:'Skilled team and accurate translations are critical for life-saving information. Some support from volunteers and university partners.', pct:25, amt:'250,000', color:'#2a78d6'},
+    {cat:'Physical Materials', desc:'Printed evacuation maps, signage, pamphlets, and informational guides. Limited distribution in Beppu during pilot phase.', pct:15, amt:'150,000', color:'#1baf7a'},
+    {cat:'Workshops & Testing', desc:'Necessary for pilot validation and user feedback. Small-scale events in Beppu.', pct:10, amt:'100,000', color:'var(--gold-bright)'},
+    {cat:'Contingency Fund', desc:'Provides financial buffer for uncertainties. Supports smooth pilot execution.', pct:10, amt:'100,000', color:'var(--red-bright)'},
+  ],
+  total:'1,000,000',
+  why:'This allocation ensures that the most critical components (technology and skilled people) receive the highest investment while keeping the pilot cost-efficient and focused on impactful testing in Beppu.',
+  note:'Indicative pilot budget: ¥1,000,000 for a limited Beppu phase using existing official data, selected languages, university support, and small-scale distribution. Costs will be refined after detailed quotations and consultation.',
+}},
+// 6 — AlertLingo: How It Works ----------------------------------------------------------------
+{kind:'howItWorks', speaker:'Shreyas', time:'2 min', data:{
+  eyebrow:'Project solution', title:'AlertLingo – How it works',
+  lead:'AlertLingo is a multilingual disaster-communication platform that delivers real-time alerts, clear instructions, and guidance in the languages people understand. It helps foreign residents and tourists in Japan stay informed, act quickly, and reach safety.',
+  feats:[
+    {icon:'bell', h:'Real-time Multilingual Alerts', p:'Delivers official disaster alerts instantly in the user\'s selected language.'},
+    {icon:'globe', h:'Automatic Translation', p:'Converts official Japanese information into clear multilingual guidance.'},
+    {icon:'map', h:'Easy Evacuation Maps', p:'Shows the nearest shelters, routes, and safe areas with simple visuals.'},
+    {icon:'users', h:'Community & Local Support', p:'Connects users with local support points and volunteers.'},
+    {icon:'wifi-off', h:'Works Offline', p:'Important information stays accessible during internet disruption.'},
+    {icon:'pin', h:'Customisable Notifications', p:'Users choose alert types and areas that matter to them.'},
+    {icon:'info', h:'Clear Instructions', p:'Step-by-step guidance using simple language and universal icons.'},
+    {icon:'lock', h:'Privacy & Data Security', p:'No unnecessary personal data; secure and trustworthy.'},
+  ],
+  steps:[
+    {h:'Official alert issued', p:'Japan Meteorological Agency or local authorities issue a disaster alert.'},
+    {h:'AlertLingo translates', p:'The platform converts the alert into the user\'s selected language.'},
+    {h:'User receives alert', p:'Users get clear instructions, maps, and guidance in real time.'},
+    {h:'User takes action', p:'Users follow the steps, find safe routes, and move toward safety.'},
+  ],
+  impact:[
+    {icon:'shield', h:'Impact in Beppu and Beyond', p:'Empowers people with information they understand.'},
+    {icon:'users', h:'Reduces confusion and panic', p:'during emergencies.'},
+    {icon:'book', h:'Improves preparedness', p:'for foreign residents, students, and tourists.'},
+    {icon:'heart', h:'Supports a safer, more inclusive Japan', p:''},
   ]
 }},
-// 6 — Project Overview: Vision & Mission ----------------------------------------------------------------
-{kind:'twocol', speaker:'Nahid', time:'1.5–2 min', data:{
-  eyebrow:'Where we\'re headed', title:'Accessibility goal, vision, and mission',
-  left:{cls:'good', head:'Accessibility Goal', icon:'shield', items:[
-    'Support for multiple languages — Chinese, Korean, English, and others — so no one is left behind',
-    'Clear and easy wording, steering clear of technical or complicated Japanese',
-    'Communication through visuals — symbols, colors, and icons that speak a universal language',
-    'Offline accessibility — because emergencies don\'t wait for a signal',
-    'Equitable access — locals and foreigners receive the same caliber of information, at the same time',
-  ]},
-  right:{cls:'warn', head:'Vision & Mission', icon:'target', items:[
-    'Vision: a Japan free from language barriers to survival — where every individual can get access to life-saving information equally during a disaster',
-    'Mission: deliver multilingual, quick, and clear disaster communication',
-    'Digital platform — GPS navigation plus an app',
-    'Printed materials and offline maps',
-    'Emergency language assistance in the community, and collaboration for timely, accurate support',
-  ]},
-}},
-// 7 — Solution Overview ----------------------------------------------------------------
-{kind:'twocol', speaker:'Mayesha', time:'2 min', data:{
-  eyebrow:'The solution', title:'Two actions, reinforcing each other',
-  left:{cls:'good', head:'Action 1 — Multilingual disaster maps', icon:'map', items:[
-    'Simple, internationally recognized icons',
-    'Color-coded evacuation routes',
-    'Digital app + printed versions at key locations',
-    'Works with zero internet connection',
-  ]},
-  right:{cls:'good', head:'Action 2 — Community emergency English', icon:'users', items:[
-    'Local residents and volunteers trained in basic safety phrases',
-    'Not fluency — just enough to point someone to a shelter',
-    'A human backup when the app or the map isn\'t enough',
-    'Builds an actual support network, not just software',
-  ]},
+// 7 — Phased Pilot Approach in Beppu ----------------------------------------------------------------
+{kind:'phasedPilot', speaker:'Zarin', time:'2 min', data:{
+  eyebrow:'Project plan', title:'Phased pilot approach in Beppu',
+  lead:'AlertLingo will be developed and tested in Beppu through a phased approach to ensure quality, user validation and continuous improvement before wider expansion.',
+  phases:[
+    {n:'01', h:'Research & Planning', sub:'Month 1', color:'c-purple', items:['Needs assessment with foreign residents, tourists and local stakeholders','Review existing disaster communication systems','Define MVP features and technical scope','Finalise project plan and success indicators']},
+    {n:'02', h:'Development of MVP', sub:'Months 2–3', color:'c-blue', items:['Build core app features (alerts, translations, maps, instructions)','Integrate reliable official disaster data sources','Design user-friendly interface','Internal testing and bug fixing']},
+    {n:'03', h:'Pilot Testing in Beppu', sub:'Months 4–5', color:'c-green', items:['Release MVP to a limited group of users','Conduct usability testing and gather feedback','Validate translations and map accuracy','Identify issues and improvement areas']},
+    {n:'04', h:'Evaluation & Refinement', sub:'Month 6', color:'', items:['Evaluate pilot results against success metrics','Refine features and fix identified issues','Improve system stability and user experience','Prepare for wider rollout']},
+    {n:'05', h:'Expansion Roadmap', sub:'Beyond Month 6', color:'c-navy', items:['Plan expansion to other areas in Oita Prefecture','Scale to other cities across Japan','Add more languages based on demand','Build partnerships for long-term sustainability']},
+  ],
+  approach:[
+    {icon:'users', h:'User-centred design and continuous feedback'},
+    {icon:'shield', h:'Reliable data and secure technology'},
+    {icon:'hand', h:'Local partnership and community involvement'},
+    {icon:'scale', h:'Data-driven decisions for better impact'},
+  ],
+  langNote:'AlertLingo will focus on the 5 most spoken languages among foreign residents and tourists in Japan.',
+  langs:[
+    {flag:'🇺🇸', name:'English'},
+    {flag:'🇨🇳', name:'Chinese (Simplified)'},
+    {flag:'🇹🇼', name:'Chinese (Traditional)'},
+    {flag:'🇰🇷', name:'Korean'},
+    {flag:'🇻🇳', name:'Vietnamese'},
+    {flag:'🇳🇵', name:'Nepali'},
+  ],
+  pilot:{h:'Beppu, Oita, Japan', p:'A diverse tourist destination with many foreign visitors and residents.'},
 }},
 // 8 — Persona ----------------------------------------------------------------
 {kind:'persona', speaker:'Farhan', time:'2 min (1/2)', data:{
@@ -805,32 +885,7 @@ const SLIDES = [
     {n:'04', h:'Training & Community', sub:'People', color:'c-purple', items:['Workshops on emergency preparedness','Programs to raise awareness among tourists','Initiatives for volunteer training','Working together with nearby communities']},
   ]
 }},
-// 22 — Financial Overview & Budget Pie ----------------------------------------------------------------
-{kind:'budgetPie', speaker:'Jannat', time:'1.5 min (1/2)', data:{
-  eyebrow:'Project financial strategy', title:'Financial overview & budget allocation',
-  lead:'Designed to support tourist safety during disasters in Japan — focused on real-time alerts, multilingual access, and rapid response. Budget prioritizes technology-driven, life-saving features.',
-  slices:[
-    {l:'Digital Development', pct:35, d:'App development, servers, maintenance, and system integration', color:'#8a6fe0'},
-    {l:'Human Resources', pct:30, d:'Project team, translators, designers, and coordinators', color:'#2a78d6'},
-    {l:'Physical Materials', pct:15, d:'Printed maps, signage, pamphlets, and guides', color:'var(--orange-bright)'},
-    {l:'Workshops & Training', pct:10, d:'Volunteer training, materials, and sessions', color:'var(--gold-bright)'},
-    {l:'Contingency', pct:10, d:'Reserve for unexpected costs and emergencies', color:'var(--red-bright)'},
-  ]
-}},
-// 23 — Cost Breakdown Table ----------------------------------------------------------------
-{kind:'table', speaker:'Jannat', time:'1.5 min (2/2)', data:{
-  eyebrow:'Smart allocation, maximum impact', title:'Cost breakdown',
-  cols:['Cost Category','Description'],
-  rows:[
-    ['Human Resource Cost','Project organizers, developers, and translators'],
-    ['Digital Development Cost','App development (frontend & backend), GPS integration, disaster alert APIs, cloud hosting'],
-    ['Translation Cost','Multilingual support (English, Chinese, Korean, and others) for app interface, alerts, and maps'],
-    ['Printing Cost','Evacuation maps, pamphlets, posters for tourist-heavy locations'],
-    ['Workshop Cost','Training sessions, awareness programs, materials for community engagement'],
-    ['Contingency Fund','Reserved budget for unexpected technical or operational costs'],
-  ]
-}},
-// 24 — Risk Overview: Heat Matrix ----------------------------------------------------------------
+// 22 — Risk Overview: Heat Matrix ----------------------------------------------------------------
 {kind:'riskMatrix', speaker:'Alvi', time:'2 min (1/3)', data:{
   eyebrow:'Early risk control protects trust, usability, and lives', title:'Risk overview',
   risks:[
@@ -841,7 +896,7 @@ const SLIDES = [
     {id:'R5', icon:'gear', h:'Scope Creep & Team Coordination Breakdown', score:9, impact:'Moderate', likelihood:3, impactY:2, d:'Incoherent delivery.'},
   ]
 }},
-// 25 — Fishbone Diagram ----------------------------------------------------------------
+// 23 — Fishbone Diagram ----------------------------------------------------------------
 {kind:'fishbone', speaker:'Alvi', time:'2 min (2/3)', data:{
   eyebrow:'Identifying root causes of risks that can affect the application', title:'Fishbone diagram for app risk analysis',
   categories:[
@@ -852,7 +907,7 @@ const SLIDES = [
   ],
   effect:'APP RISK / SYSTEM FAILURE',
 }},
-// 26 — Risk Mitigation Strategy ----------------------------------------------------------------
+// 24 — Risk Mitigation Strategy ----------------------------------------------------------------
 {kind:'table', speaker:'Alvi', time:'2 min (3/3)', data:{
   eyebrow:'Reduce what we control. Prepare for what we cannot control.', title:'Risk mitigation strategy',
   cols:['Risk ID','Risk','Strategy','Mitigation Actions'],
@@ -864,10 +919,10 @@ const SLIDES = [
     ['R5','Scope Creep','<span class="pill reduce">Reduce</span>','Weekly sync · Change log · RACI-based approval before edits'],
   ]
 }},
-// 27 — Conclusion ----------------------------------------------------------------
+// 25 — Conclusion ----------------------------------------------------------------
 {kind:'conclusion', speaker:'Alvi', time:'closing', data:{
   eyebrow:'Closing',
-  quote1:'alertlingo is more than a disaster app.',
+  quote1:'alert<span class="hl">lingo</span> is more than a disaster app.',
   quote2:'It\'s the bridge connecting official alerts, multilingual translation, offline backup, and neighbors who show up.',
   sub:'Our vision: a Japan where no foreigner is left behind in a disaster — because language was never a barrier to survival.',
   cards:[
@@ -912,9 +967,14 @@ function renderTeam(d){
 }
 function renderTwocol(d){
   const col = (c)=>`<div class="col-card ${c.cls}"><div class="col-head">${ICON(c.icon)} ${c.head}</div><ul>${c.items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`;
+  const footer = d.footer ? `<div class="col-card reveal" style="margin-top:16px; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+    <div style="display:flex; align-items:center; gap:10px; max-width:480px;"><span class="ico-box" style="width:34px;height:34px;flex-shrink:0;">${ICON('shield')}</span><span style="font-size:12.5px; color:var(--mist); line-height:1.5;"><b style="color:var(--ink); display:block; font-size:13.5px;">${d.footer.h}</b>${d.footer.p}</span></div>
+    <div style="display:flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:10.5px; color:var(--mist);">${d.footer.steps.map((s,i)=>`${i?'<span style="opacity:.4;">→</span>':''}<span>${s}</span>`).join('')}</div>
+  </div>` : '';
   return `<div class="eyebrow reveal">${d.eyebrow}</div>
   <h1 class="title reveal">${d.title}</h1>
-  <div class="twocol reveal">${col(d.left)}${col(d.right)}</div>`;
+  <div class="twocol reveal">${col(d.left)}${col(d.right)}</div>
+  ${footer}`;
 }
 function renderFgrid(d){
   return `<div class="eyebrow reveal">${d.eyebrow}</div>
@@ -1008,6 +1068,7 @@ function renderConclusion(d){
 function renderPlatformMockup(d){
   const a = d.alertScreen, r = d.routeScreen;
   const phone1 = `<div class="mockup-col">
+    <div class="phone-mini"><div class="phone-scale">
     <div class="phone"><div class="screen">
       <div class="pbar">Alert Dashboard ${ICON('globe')}</div>
       <div class="pbody">
@@ -1029,9 +1090,11 @@ function renderPlatformMockup(d){
         </div>
       </div>
     </div></div>
+    </div></div>
     <div class="mockup-caption">Alert Dashboard</div><div class="mockup-sub">Real-time updates that keep you informed.</div>
   </div>`;
   const phone2 = `<div class="mockup-col">
+    <div class="phone-mini"><div class="phone-scale">
     <div class="phone"><div class="screen">
       <div class="pbar">Safe Route GPS ${ICON('gear')}</div>
       <div class="pbody">
@@ -1043,11 +1106,12 @@ function renderPlatformMockup(d){
         <div class="arrivalrow"><span>Arrival in ${r.eta} · ${r.dist}</span><button>End</button></div>
       </div>
     </div></div>
+    </div></div>
     <div class="mockup-caption">Dynamic Map UI</div><div class="mockup-sub">Turn-by-turn guidance to the nearest safe shelter.</div>
   </div>`;
   return `<div class="eyebrow reveal">${d.eyebrow}</div>
-  <h1 class="title reveal">${d.title}</h1>
-  <p class="lead reveal">${d.lead}</p>
+  <h1 class="title reveal" style="font-size:clamp(23px,2.6vw,33px); margin-bottom:9px;">${d.title}</h1>
+  <p class="lead reveal" style="font-size:13.5px; line-height:1.5; margin-bottom:6px;">${d.lead}</p>
   <div class="mockup-row reveal">
     <div class="platform-feats">${d.feats.map(f=>`<div class="pf"><div class="ico-box">${ICON(f.icon)}</div><h4>${f.h}</h4><p>${f.p}</p></div>`).join('')}</div>
     ${phone1}${phone2}
@@ -1056,14 +1120,17 @@ function renderPlatformMockup(d){
 
 function renderPhysicalMaterials(d){
   return `<div class="eyebrow reveal">${d.eyebrow}</div>
-  <h1 class="title reveal">${d.title}</h1>
-  <div class="twocol reveal" style="grid-template-columns:1fr 1.1fr; align-items:start;">
-    <div class="fgrid" style="--cols:2; gap:12px;">
-      ${d.items.map(i=>`<div class="fcard" style="padding:16px;"><div class="ico-box" style="width:34px;height:34px;margin-bottom:10px;">${ICON(i.icon)}</div><h3 style="font-size:13.5px;">${i.h}</h3><p style="font-size:11.5px;">${i.p}</p></div>`).join('')}
+  <h1 class="title reveal" style="font-size:clamp(24px,2.7vw,34px);">${d.title}</h1>
+  <div class="twocol reveal" style="grid-template-columns:1fr 1.1fr; align-items:start; margin-top:8px;">
+    <div class="fgrid" style="--cols:2; gap:13px;">
+      ${d.items.map(i=>`<div class="fcard" style="padding:17px;"><div class="ico-box" style="width:36px;height:36px;margin-bottom:11px;">${ICON(i.icon)}</div><h3 style="font-size:14.5px;">${i.h}</h3><p style="font-size:12.5px;">${i.p}</p></div>`).join('')}
     </div>
     <div>
-      <img src="assets/beppu-hazard-map.jpg" alt="Beppu City hazard map" style="width:100%; border-radius:14px; border:1px solid var(--line);">
-      <p style="font-size:11.5px; color:var(--mist); margin-top:8px; line-height:1.5;">${d.mapCaption}</p>
+      <div style="width:100%; aspect-ratio:1485/902; border-radius:14px; border:1px solid var(--line); background:rgba(15,29,58,0.04); overflow:hidden; position:relative;">
+        <img src="assets/beppu-hazard-map.jpg" alt="Beppu City hazard map" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div style="display:none; position:absolute; inset:0; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:var(--mist); text-align:center; padding:20px;">${ICON('map')}<span style="font-size:12px; max-width:220px;">Beppu City hazard map — image unavailable, see printed handout</span></div>
+      </div>
+      <p style="font-size:12.5px; color:var(--mist); margin-top:9px; line-height:1.5;">${d.mapCaption}</p>
     </div>
   </div>`;
 }
@@ -1159,6 +1226,141 @@ function renderBudgetPie(d){
   </div>`;
 }
 
+// ---- problem: scale-of-challenge stats + consequences (slide 3) ----
+function renderProblemStats(d){
+  return `<div class="eyebrow reveal" style="margin-top:14px;">${d.eyebrow}</div>
+  <h1 class="title reveal" style="font-size:clamp(22px,2.4vw,29px); line-height:1.2; max-width:800px; margin-bottom:12px;">${d.title}</h1>
+  <div class="twocol reveal" style="grid-template-columns:1.35fr 0.85fr; gap:26px; align-items:start; margin-bottom:12px;">
+    <p class="lead" style="margin:0; font-size:13px; line-height:1.5; max-width:540px;">${d.lead}</p>
+    <div class="col-card good" style="padding:12px 16px; margin-left:auto; max-width:380px; width:100%;">
+      <div class="col-head" style="margin-bottom:7px; font-size:11.5px;">${ICON('target')} The scale of the challenge</div>
+      <div class="stat-grid">
+        ${d.stats.map(s=>`<div class="stat-cell"><div class="ico-box">${ICON(s.icon)}</div><b>${s.val}</b><span>${s.label}</span><em>${s.sub}</em></div>`).join('')}
+      </div>
+    </div>
+  </div>
+  <div style="font-family:var(--font-mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--orange-dark); margin-bottom:8px;" class="reveal">Real-world consequences</div>
+  <div class="fgrid reveal" style="--cols:4; gap:9px; margin-bottom:10px;">
+    ${d.consequences.map(c=>`<div class="fcard" style="padding:10px 12px;"><div class="ico-box" style="width:22px;height:22px;margin-bottom:5px;">${ICON(c.icon)}</div><h3 style="font-size:11.5px; margin-bottom:3px;">${c.h}</h3><p style="font-size:10px;">${c.d}</p></div>`).join('')}
+  </div>
+  <div class="col-card warn reveal" style="padding:9px 15px; display:flex; align-items:center; gap:11px;">
+    <span class="ico-box" style="width:24px;height:24px;flex-shrink:0;">${ICON('info')}</span>
+    <p style="font-size:10.5px; color:var(--mist); margin:0; line-height:1.4;"><b style="color:var(--ink);">Why it matters —</b> ${d.why}</p>
+  </div>
+  <div class="foot-cite reveal" style="font-size:8.5px; margin-top:5px;">${d.footnotes.map((f,i)=>`${i+1}. ${f}`).join(' &nbsp;&nbsp; ')}</div>`;
+}
+
+// ---- budget table + donut (slide 5) ----
+function renderBudgetTable(d){
+  let acc = 0;
+  const stops = d.rows.map(r=>{ const start = acc; acc += r.pct; return `${r.color} ${start}% ${acc}%`; }).join(', ');
+  const cx=167.5, cy=167.5, rOuter=110, rLabelBase=148;
+  let acc2 = 0;
+  const leaders = d.rows.map((r,i)=>{
+    const mid = acc2 + r.pct/2; acc2 += r.pct;
+    const ang = (mid/100)*2*Math.PI - Math.PI/2;
+    const cos = Math.cos(ang), sin = Math.sin(ang);
+    const rLabel = rLabelBase + (r.pct<=12 && i%2===1 ? 26 : 0);
+    const x1 = cx + rOuter*cos, y1 = cy + rOuter*sin;
+    const xm = cx + (rOuter+15)*cos, ym = cy + (rOuter+15)*sin;
+    const x2 = cx + rLabel*cos, y2 = cy + rLabel*sin;
+    const anchor = cos > 0.25 ? 'start' : (cos < -0.25 ? 'end' : 'middle');
+    return `<polyline points="${x1.toFixed(1)},${y1.toFixed(1)} ${xm.toFixed(1)},${ym.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}" fill="none" stroke="${r.color}" stroke-width="1.6"/><circle cx="${x1.toFixed(1)}" cy="${y1.toFixed(1)}" r="3.2" fill="${r.color}"/><text x="${x2.toFixed(1)}" y="${y2.toFixed(1)}" text-anchor="${anchor}" dy="4.5" font-size="13" font-weight="700" font-family="IBM Plex Mono, monospace" fill="${r.color}">${r.pct}%</text>`;
+  }).join('');
+  return `<div class="eyebrow reveal">${d.eyebrow}</div>
+  <h1 class="title reveal" style="font-size:clamp(23px,2.6vw,33px); margin-bottom:9px;">${d.title}</h1>
+  <p class="lead reveal" style="font-size:13.5px; line-height:1.5; margin-bottom:13px;">${d.lead}</p>
+  <div class="budget-wrap reveal">
+    <table class="dtable compact" style="font-size:13px;">
+      <tr><th>Cost Category</th><th>Basis for allocation</th><th>Alloc.</th><th>Amount</th></tr>
+      ${d.rows.map(r=>`<tr><td>${r.cat}</td><td style="font-size:11.5px;">${r.desc}</td><td style="color:${r.color}; font-weight:700;">${r.pct}%</td><td>¥${r.amt}</td></tr>`).join('')}
+      <tr><td style="font-weight:700;">Total</td><td></td><td style="font-weight:700;">100%</td><td style="font-weight:700;">¥${d.total}</td></tr>
+    </table>
+    <div class="budget-side">
+      <div class="pie-center">
+        <div class="pie" style="background:conic-gradient(${stops})"></div>
+        <div class="center-label"><b>¥${d.total}</b><span>Total budget</span></div>
+        <svg class="pie-leaders" viewBox="0 0 335 335">${leaders}</svg>
+      </div>
+      <div class="col-card good" style="padding:15px 19px; width:100%;">
+        <div class="col-head" style="font-size:13px; margin-bottom:8px;">${ICON('check')} Why this allocation?</div>
+        <p style="font-size:12.5px; color:var(--mist); margin:0; line-height:1.5;">${d.why}</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-cite reveal" style="margin-top:9px;">${d.note}</div>`;
+}
+
+// ---- how it works: phone + feature grid + step list (slide 6) ----
+function renderHowItWorks(d){
+  return `<div class="eyebrow reveal">${d.eyebrow}</div>
+  <h1 class="title reveal" style="font-size:clamp(22px,2.5vw,31px); margin-bottom:8px;">${d.title}</h1>
+  <p class="lead reveal" style="font-size:13.5px; line-height:1.5; margin-bottom:12px;">${d.lead}</p>
+  <div class="hiw-wrap reveal">
+    <div class="phone-mini"><div class="phone-scale">
+      <div class="phone"><div class="screen">
+        <div class="pbar">alertlingo ${ICON('globe')}</div>
+        <div class="pbody">
+          <div class="alertcard" style="border-color:rgba(230,57,70,.35); background:rgba(230,57,70,.06);">
+            <svg class="tri icn" style="color:var(--red-bright);"><use href="#i-alert"/></svg>
+            <h5>Earthquake Warning</h5>
+            <p>Strong shaking expected in your area. Today, 9:41 AM</p>
+          </div>
+          <div class="optgrid">
+            <div class="optcell">${ICON('info')}What to do</div>
+            <div class="optcell">${ICON('map')}Evacuation map</div>
+            <div class="optcell">${ICON('bell')}Updates</div>
+            <div class="optcell">${ICON('users')}I need help</div>
+          </div>
+          <div class="langrow"><span>${ICON('globe')} Language</span><span>English ▾</span></div>
+        </div>
+      </div></div>
+    </div></div>
+    <div class="fgrid" style="--cols:4; flex:1; min-width:420px; gap:9px;">
+      ${d.feats.map(f=>`<div class="fcard" style="padding:11px;"><div class="ico-box" style="width:27px;height:27px;margin-bottom:6px;">${ICON(f.icon)}</div><h3 style="font-size:12px; margin-bottom:3px;">${f.h}</h3><p style="font-size:10.5px;">${f.p}</p></div>`).join('')}
+    </div>
+  </div>
+  <div class="hiw-steps-row reveal" style="margin-top:14px;">
+    <div class="hiw-steps-label">${ICON('route')} How it works</div>
+    ${d.steps.map((s,i)=>`<div class="hiw-step-h"><div class="n">${i+1}</div><div><b>${s.h}</b><span>${s.p}</span></div></div>`).join('')}
+  </div>
+  <div class="reveal" style="display:flex; align-items:center; gap:20px; margin-top:12px; padding:11px 18px; border:1px solid var(--line); border-radius:14px; background:rgba(15,29,58,.03); flex-wrap:wrap;">
+    ${d.impact.map(m=>`<div style="display:flex; align-items:center; gap:8px; font-size:11px; color:var(--mist);">${ICON(m.icon)}<span><b style="color:var(--ink); font-size:12px;">${m.h}</b> ${m.p}</span></div>`).join('')}
+  </div>`;
+}
+
+// ---- phased pilot: 5-phase row + languages/pilot sidebar (slide 7) ----
+function renderPhasedPilot(d){
+  return `<div class="eyebrow reveal">${d.eyebrow}</div>
+  <h1 class="title reveal" style="font-size:clamp(23px,2.5vw,32px); margin-bottom:9px;">${d.title}</h1>
+  <p class="lead reveal" style="font-size:13.5px; line-height:1.5; margin-bottom:12px;">${d.lead}</p>
+  <div class="pilot-wrap reveal">
+    <div>
+      <div class="phase-row" style="grid-template-columns:repeat(5,1fr); gap:9px;">
+        ${d.phases.map(p=>`<div class="phase-card ${p.color||''}" data-n="${p.n}" style="padding:12px;"><h3 style="font-size:13px;">${p.h}</h3><div class="sub" style="font-size:9.5px;">${p.sub}</div><ul style="gap:5px;">${p.items.map(i=>`<li style="font-size:10.5px;">${i}</li>`).join('')}</ul></div>`).join('')}
+      </div>
+      <div class="reveal" style="display:flex; align-items:center; gap:20px; margin-top:12px; padding:11px 17px; border:1px solid var(--line); border-radius:14px; background:rgba(15,29,58,.03); flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:8px; font-family:var(--font-display); font-weight:700; font-size:13px;">${ICON('target')} Our approach</div>
+        ${d.approach.map(a=>`<div style="display:flex; align-items:center; gap:7px; font-size:11.5px; color:var(--mist);">${ICON(a.icon)}<span>${a.h}</span></div>`).join('')}
+      </div>
+    </div>
+    <div>
+      <div class="col-card good" style="padding:13px 17px; margin-bottom:10px;">
+        <div class="col-head" style="font-size:12.5px;">${ICON('chat')} Supported languages (MVP)</div>
+        <p style="font-size:11px; color:var(--mist); margin-bottom:8px; line-height:1.4;">${d.langNote}</p>
+        <div class="lang-list">
+          ${d.langs.map(l=>`<div class="lang-row"><span class="flag">${l.flag}</span><span>${l.name}</span></div>`).join('')}
+        </div>
+      </div>
+      <div class="col-card warn" style="padding:13px 17px;">
+        <div class="col-head" style="font-size:12.5px;">${ICON('pin')} Pilot location</div>
+        <b style="display:block; font-size:15px; margin-bottom:3px;">${d.pilot.h}</b>
+        <span style="font-size:12px; color:var(--mist); line-height:1.5;">${d.pilot.p}</span>
+      </div>
+    </div>
+  </div>`;
+}
+
 const RENDERERS = {
   basic:renderBasic, cover:renderCover, team:renderTeam, twocol:renderTwocol,
   fgrid:renderFgrid, overviewPillars:renderOverviewPillars, persona:renderPersona, journey:renderJourney,
@@ -1166,6 +1368,7 @@ const RENDERERS = {
   platformMockup:renderPlatformMockup, physicalMaterials:renderPhysicalMaterials, distribution:renderDistribution,
   riskMatrix:renderRiskMatrix, fishbone:renderFishbone, budgetPie:renderBudgetPie,
   successList:renderSuccessList, conclusion:renderConclusion,
+  problemStats:renderProblemStats, budgetTable:renderBudgetTable, howItWorks:renderHowItWorks, phasedPilot:renderPhasedPilot,
 };
 
 // ===================== BUILD DOM =====================
